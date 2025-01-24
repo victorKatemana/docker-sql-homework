@@ -24,3 +24,21 @@ docker run it --entrypoint bash python:3.12.8
   ```
 ### output
 **Answer** the version of `pip` in the `python:3.12.8` image is **24.3.1**
+
+## Question 2: understanding Docker Networking and Docker Compose
+
+### Overview
+This task involves understanding how docker compose services communicate within the same network. 
+
+### Analysis of `docker-compose.yaml`
+
+1. **Host and port for pgAdmin:**
+   -**Hostname:** `db`
+   -**port:** `5432`
+
+### Test the setup with the following steps
+1. save the `docker-compose.yaml` file. 
+2. Run the following command: 
+    ```bash
+        docker-compose up 
+    ```
