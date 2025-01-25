@@ -20,7 +20,17 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - vol-pgadmin_data:/var/lib/pgadmin  
+      - vol-pgadmin_data:/var/lib/pgadmin
+
+  data_loader:
+    container_name: load_data
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+    depends_on:
+      - db
 
 volumes:
   vol-pgdata:
